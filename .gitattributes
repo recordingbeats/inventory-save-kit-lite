@@ -1,0 +1,11 @@
+# Godot Asset Library: only addons/ goes into the download ZIP
+/.gitattributes export-ignore
+/.gutconfig.json export-ignore
+/CHANGELOG.md export-ignore
+/LICENSE export-ignore
+/PROVENANCE.md export-ignore
+/README.md export-ignore
+/demo export-ignore
+/docs export-ignore
+/project.godot export-ignore
+/tests export-ignore

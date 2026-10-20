@@ -1,0 +1,127 @@
+[gd_resource type="Theme" load_steps=8 format=3]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slot"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.168627, 0.133333, 0.207843, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.301961, 0.231373, 0.337255, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slot_hover"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.227451, 0.180392, 0.282353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.788235, 0.635294, 0.419608, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slot_selected"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.270588, 0.207843, 0.317647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.94902, 0.823529, 0.478431, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.94902, 0.823529, 0.478431, 0.35)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slot_locked"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.105882, 0.086275, 0.12549, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.164706, 0.219608, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tooltip"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+bg_color = Color(0.121569, 0.094118, 0.156863, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.788235, 0.635294, 0.419608, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 4
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_label"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_title"]
+content_margin_bottom = 4.0
+
+[resource]
+ISKCountLabel/base_type = &"Label"
+ISKCountLabel/colors/font_color = Color(0.956863, 0.92549, 0.847059, 1)
+ISKCountLabel/colors/font_outline_color = Color(0.101961, 0.070588, 0.12549, 1)
+ISKCountLabel/constants/outline_size = 4
+ISKCountLabel/font_sizes/font_size = 13
+ISKCountLabel/styles/normal = SubResource("StyleBoxEmpty_label")
+ISKSlot/base_type = &"PanelContainer"
+ISKSlot/constants/drag_source_alpha_percent = 35
+ISKSlot/constants/icon_size = 32
+ISKSlot/constants/slot_size = 48
+ISKSlot/styles/panel = SubResource("StyleBoxFlat_slot")
+ISKSlotHover/base_type = &"ISKSlot"
+ISKSlotHover/styles/panel = SubResource("StyleBoxFlat_slot_hover")
+ISKSlotLocked/base_type = &"ISKSlot"
+ISKSlotLocked/constants/icon_alpha_percent = 40
+ISKSlotLocked/styles/panel = SubResource("StyleBoxFlat_slot_locked")
+ISKSlotSelected/base_type = &"ISKSlot"
+ISKSlotSelected/styles/panel = SubResource("StyleBoxFlat_slot_selected")
+ISKTooltipBody/base_type = &"Label"
+ISKTooltipBody/colors/font_color = Color(0.85098, 0.807843, 0.737255, 1)
+ISKTooltipBody/font_sizes/font_size = 13
+ISKTooltipBody/styles/normal = SubResource("StyleBoxEmpty_label")
+ISKTooltipMeta/base_type = &"Label"
+ISKTooltipMeta/colors/font_color = Color(0.623529, 0.576471, 0.666667, 1)
+ISKTooltipMeta/font_sizes/font_size = 12
+ISKTooltipMeta/styles/normal = SubResource("StyleBoxEmpty_label")
+ISKTooltipPanel/base_type = &"PanelContainer"
+ISKTooltipPanel/constants/line_separation = 2
+ISKTooltipPanel/constants/max_text_width = 220
+ISKTooltipPanel/styles/panel = SubResource("StyleBoxFlat_tooltip")
+ISKTooltipTitle/base_type = &"Label"
+ISKTooltipTitle/colors/font_color = Color(0.94902, 0.823529, 0.478431, 1)
+ISKTooltipTitle/font_sizes/font_size = 16
+ISKTooltipTitle/styles/normal = SubResource("StyleBoxEmpty_title")

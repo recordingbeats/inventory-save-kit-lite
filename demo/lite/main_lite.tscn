@@ -1,0 +1,67 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://demo/world/isk_demo_world.gd" id="world"]
+[ext_resource type="Script" path="res://demo/world/isk_demo_player.gd" id="player"]
+[ext_resource type="Script" path="res://demo/world/isk_demo_pickup.gd" id="pickup"]
+[ext_resource type="Script" path="res://demo/world/isk_demo_checkpoint.gd" id="checkpoint"]
+
+[node name="MainLite" type="Node2D"]
+script = ExtResource("world")
+ui_scene_path = "res://demo/ui/demo_ui_lite.tscn"
+
+[node name="Start" type="Marker2D" parent="."]
+position = Vector2(60, 140)
+
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="Coins" type="Area2D" parent="Pickups"]
+position = Vector2(190, 112)
+script = ExtResource("pickup")
+item_id = &"gold_coin"
+amount = 12
+pickup_id = "coins"
+
+[node name="HealthPotions" type="Area2D" parent="Pickups"]
+position = Vector2(90, 60)
+script = ExtResource("pickup")
+item_id = &"health_potion"
+amount = 3
+pickup_id = "health_potions"
+
+[node name="StaminaPotions" type="Area2D" parent="Pickups"]
+position = Vector2(150, 220)
+script = ExtResource("pickup")
+item_id = &"stamina_potion"
+amount = 2
+pickup_id = "stamina_potions"
+
+[node name="Logs" type="Area2D" parent="Pickups"]
+position = Vector2(330, 240)
+script = ExtResource("pickup")
+item_id = &"wood_log"
+amount = 4
+pickup_id = "logs"
+
+[node name="Arrows" type="Area2D" parent="Pickups"]
+position = Vector2(220, 250)
+script = ExtResource("pickup")
+item_id = &"arrow"
+amount = 20
+pickup_id = "arrows"
+
+[node name="Dagger" type="Area2D" parent="Pickups"]
+position = Vector2(250, 170)
+script = ExtResource("pickup")
+item_id = &"dagger"
+pickup_id = "dagger"
+
+[node name="Drops" type="Node2D" parent="."]
+
+[node name="OldWell" type="Area2D" parent="."]
+position = Vector2(160, 126)
+script = ExtResource("checkpoint")
+checkpoint_name = "Old Well"
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(60, 140)
+script = ExtResource("player")

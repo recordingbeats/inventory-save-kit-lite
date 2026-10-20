@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Theme" path="res://addons/inventory_save_kit/ui/theme/isk_default_theme.tres" id="theme"]
+[ext_resource type="Script" path="res://demo/ui_test/grid_test.gd" id="script"]
+[ext_resource type="Script" path="res://addons/inventory_save_kit/ui/isk_inventory_grid.gd" id="grid"]
+
+[node name="GridTest" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_filter = 1
+theme = ExtResource("theme")
+script = ExtResource("script")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Row" type="HBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Bag" type="GridContainer" parent="Margin/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+columns = 4
+script = ExtResource("grid")
+
+[node name="Chest" type="GridContainer" parent="Margin/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+columns = 4
+script = ExtResource("grid")
+
